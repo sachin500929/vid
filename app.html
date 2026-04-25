@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FATIMA YOUTH FEDERATION OF YAYAMULLA - Upload & Showcase</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts: Inter for clean UI, Playfair Display for elegant headings -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <!-- Ionicons for beautiful icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+
+    <!-- Background Elements -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header class="glass-nav">
+        <div class="logo">
+            <ion-icon name="aperture-outline"></ion-icon>
+            <span style="font-size: 1rem;">FATIMA YOUTH FEDERATION OF YAYAMULLA</span>
+        </div>
+        <nav>
+            <a href="#" class="active">Upload</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#">Events</a>
+        </nav>
+        <a href="index.html" class="btn-primary btn-nav" style="text-decoration: none;">Sign Out</a>
+    </header>
+
+    <main class="container">
+        <section class="hero-section">
+            <div class="hero-content">
+                <span class="badge">New Event Management</span>
+                <h1>Capture & Share<br>Your <span class="highlight">Unforgettable</span> Memories</h1>
+                <p>Upload high-quality photos and videos instantly to our secure, beautifully designed event gallery.</p>
+            </div>
+        </section>
+
+        <section class="upload-section glass-panel">
+            <div class="section-header">
+                <h2>Upload Media</h2>
+                <div class="event-selector">
+                    <label for="event-select">Select Event</label>
+                    <div class="select-wrapper">
+                        <select id="event-select">
+                            <option value="none" disabled selected>Choose an event...</option>
+                            <option value="wedding">Sarah & John's Wedding</option>
+                            <option value="corporate">Tech Conference 2026</option>
+                            <option value="party">Summer Beach Party</option>
+                        </select>
+                        <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upload-area" id="upload-area">
+                <input type="file" id="file-input" multiple accept="image/*,video/*">
+                <div class="upload-content">
+                    <div class="upload-icon-pulse">
+                        <ion-icon name="cloud-upload-outline"></ion-icon>
+                    </div>
+                    <h3>Drag & Drop files here</h3>
+                    <p>or click to browse from your device</p>
+                    <span class="upload-limits">Supports JPG, PNG, MP4 (Unlimited Size)</span>
+                </div>
+            </div>
+
+            <div class="preview-area" id="preview-area">
+                <!-- Preview items will be injected here via JS -->
+            </div>
+
+            <div class="upload-actions">
+                <button class="btn-secondary" id="clear-btn" style="display: none;">Clear Selection</button>
+                <button class="btn-primary" id="upload-btn" disabled>
+                    <ion-icon name="push-outline"></ion-icon> Upload Media
+                </button>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <div class="section-header">
+                <h2>Recent Uploads</h2>
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="image">Photos</button>
+                    <button class="filter-btn" data-filter="video">Videos</button>
+                </div>
+            </div>
+
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items injected via JS -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FATIMA YOUTH FEDERATION OF YAYAMULLA Platform.</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
